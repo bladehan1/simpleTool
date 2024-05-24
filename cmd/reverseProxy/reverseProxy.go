@@ -42,8 +42,8 @@ func main() {
 	}
 	frontendProxy := &http.Server{
 		Addr:           fmt.Sprintf(":%s", port),
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
+		ReadTimeout:    1000 * time.Second,
+		WriteTimeout:   1000 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 		Handler:        &reversProxy,
 	}
